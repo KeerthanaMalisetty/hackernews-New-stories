@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 function App() {
   const [news, setNews] = useState(null);
-  const [limit, setLimit] = useState(6);
+  const [limit, setLimit] = useState(10);
 
   useEffect(() => {
     fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty&orderBy="$priority"&limitToFirst=${limit}`)
@@ -15,7 +15,7 @@ function App() {
 
 
   const scrollToEnd = () => {
-    setLimit(limit + 6);
+    setLimit(limit + 10);
   };
 
   window.onscroll = function () {
