@@ -56,7 +56,7 @@ export function Test({ storyid }) {
   }
   useEffect(() => {
     getstory(storyid)
-  });
+  }, []);
 
   return story && story.title ? (
     <div className='newscard'>
